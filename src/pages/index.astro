@@ -1,5 +1,5 @@
 ---
-
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -8,9 +8,129 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>LUCIDS - Coming Soon</title>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+		<title>LUCIDS Design System</title>
 	</head>
 	<body>
-		<h1>LUCIDS - Coming Soon</h1>
+		<div class="container" style="padding-top: var(--space-12); padding-bottom: var(--space-12);">
+			<header style="margin-bottom: var(--space-16);">
+				<h1 class="text-glow" style="margin-bottom: var(--space-2);">LUCIDS</h1>
+				<p class="text-secondary text-lg">Design System Specimen</p>
+			</header>
+
+			<!-- Typography Specimen -->
+			<section style="margin-bottom: var(--space-16);">
+				<h2 class="text-amber">Typography</h2>
+
+				<div class="card" style="margin-bottom: var(--space-8);">
+					<h3 style="margin-bottom: var(--space-6);">Display Font: Fredoka</h3>
+					<h1>Heading 1 - The Hallow Awaits</h1>
+					<h2>Heading 2 - Bioluminescent Dreams</h2>
+					<h3>Heading 3 - Into the Caverns</h3>
+					<h4>Heading 4 - Crystal Caves</h4>
+					<h5>Heading 5 - Mycelium Networks</h5>
+					<h6>Heading 6 - Tidal Pools</h6>
+				</div>
+
+				<div class="card">
+					<h3 style="margin-bottom: var(--space-6);">Body Font: Inter</h3>
+					<p class="text-emphasis text-xl weight-semibold">
+						Large emphasis text - Perfect for introductions
+					</p>
+					<p class="text-lg">
+						Large body text - Easy to read, friendly but professional
+					</p>
+					<p class="text-base">
+						Base body text - The soft glow of bioluminescent fungi illuminates the cavern walls, casting dancing shadows across ancient stone. This is the Hallow, a world beneath the world, where magic pulses through living crystal and whispers echo through endless chambers.
+					</p>
+					<p class="text-sm text-secondary">
+						Small secondary text - Great for metadata and captions
+					</p>
+				</div>
+			</section>
+
+			<!-- Color Palette -->
+			<section style="margin-bottom: var(--space-16);">
+				<h2 class="text-amber">Color Palette</h2>
+
+				<div style="margin-bottom: var(--space-8);">
+					<h3 style="margin-bottom: var(--space-4);">Environment</h3>
+					<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
+						<div style="background-color: var(--color-cavern-deep); padding: var(--space-6); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+							<div class="text-sm text-secondary">Deep Cavern</div>
+							<div class="text-xs text-secondary">#0D1518</div>
+						</div>
+						<div style="background-color: var(--color-cavern-mid); padding: var(--space-6); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+							<div class="text-sm text-secondary">Mid Cavern</div>
+							<div class="text-xs text-secondary">#1E2D2F</div>
+						</div>
+						<div style="background-color: var(--color-cavern-subtle); padding: var(--space-6); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+							<div class="text-sm text-secondary">Subtle</div>
+							<div class="text-xs text-secondary">#2A3F3F</div>
+						</div>
+					</div>
+				</div>
+
+				<div style="margin-bottom: var(--space-8);">
+					<h3 style="margin-bottom: var(--space-4);">Bioluminescent Glow</h3>
+					<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
+						<div style="background-color: var(--color-glow-primary); padding: var(--space-6); border-radius: var(--radius-md);">
+							<div class="text-sm" style="color: var(--color-cavern-deep);">Primary Glow</div>
+							<div class="text-xs" style="color: var(--color-cavern-deep);">#7FDBCA</div>
+						</div>
+						<div style="background-color: var(--color-glow-light); padding: var(--space-6); border-radius: var(--radius-md);">
+							<div class="text-sm" style="color: var(--color-cavern-deep);">Light Glow</div>
+							<div class="text-xs" style="color: var(--color-cavern-deep);">#A8E6CF</div>
+						</div>
+						<div style="background-color: var(--color-glow-muted); padding: var(--space-6); border-radius: var(--radius-md);">
+							<div class="text-sm" style="color: var(--color-cavern-deep);">Muted Glow</div>
+							<div class="text-xs" style="color: var(--color-cavern-deep);">#4A9E8E</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h3 style="margin-bottom: var(--space-4);">Crystal & Amber</h3>
+					<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
+						<div style="background-color: var(--color-amber-primary); padding: var(--space-6); border-radius: var(--radius-md);">
+							<div class="text-sm" style="color: var(--color-cavern-deep);">Primary Amber</div>
+							<div class="text-xs" style="color: var(--color-cavern-deep);">#E8A857</div>
+						</div>
+						<div style="background-color: var(--color-amber-light); padding: var(--space-6); border-radius: var(--radius-md);">
+							<div class="text-sm" style="color: var(--color-cavern-deep);">Light Amber</div>
+							<div class="text-xs" style="color: var(--color-cavern-deep);">#E8C078</div>
+						</div>
+						<div style="background-color: var(--color-amber-muted); padding: var(--space-6); border-radius: var(--radius-md);">
+							<div class="text-sm" style="color: var(--color-cavern-deep);">Muted Amber</div>
+							<div class="text-xs" style="color: var(--color-cavern-deep);">#C4956A</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Component Examples -->
+			<section>
+				<h2 class="text-amber">Components</h2>
+
+				<div class="card" style="margin-bottom: var(--space-8);">
+					<h3>Buttons</h3>
+					<div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+						<button class="btn btn-primary">Explore the Hallow</button>
+						<button class="btn btn-secondary">Learn More</button>
+					</div>
+				</div>
+
+				<div class="card">
+					<h3>Card Example</h3>
+					<p>This is a card component using the mid-cavern background with subtle borders. Perfect for content sections, episode listings, or character profiles.</p>
+					<a href="#" class="text-brand">Link example →</a>
+				</div>
+			</section>
+		</div>
 	</body>
 </html>
