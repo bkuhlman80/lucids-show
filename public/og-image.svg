@@ -22,14 +22,14 @@
   <!-- Central subtle glow behind text -->
   <ellipse cx="600" cy="315" rx="500" ry="300" fill="url(#centralGlow)" />
 
-  <!-- Main content - vertically centered, scaled up 2x -->
+  <!-- Main content - vertically centered, fine-tuned sizing -->
   <g>
-    <!-- LUCIDS wordmark - scaled up -->
+    <!-- LUCIDS wordmark -->
     <text
       x="600"
       y="240"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="220"
+      font-size="200"
       font-weight="700"
       fill="#7FDBCA"
       text-anchor="middle"
@@ -37,24 +37,24 @@
       letter-spacing="2"
     >LUCIDS</text>
 
-    <!-- Tagline - scaled up proportionally -->
+    <!-- Tagline -->
     <text
       x="600"
       y="360"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="84"
+      font-size="80"
       font-weight="400"
       fill="#A8E6CF"
       text-anchor="middle"
       letter-spacing="0"
     >Dream-tenders of the Hallow</text>
 
-    <!-- Subtitle - scaled up proportionally -->
+    <!-- Subtitle -->
     <text
       x="600"
-      y="450"
+      y="445"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="68"
+      font-size="60"
       font-weight="400"
       fill="#888888"
       text-anchor="middle"
