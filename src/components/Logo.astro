@@ -5,11 +5,11 @@ const { class: className = '' } = Astro.props;
 
 <svg
   class={`lucids-logo ${className}`}
-  viewBox="0 0 280 80"
+  viewBox="0 0 280 100"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   role="img"
-  aria-label="LUCIDS"
+  aria-label="LUCIDS - Dream-tenders of the Hallow"
 >
   <defs>
     <filter id="glow">
@@ -23,7 +23,7 @@ const { class: className = '' } = Astro.props;
 
   <text
     x="140"
-    y="55"
+    y="48"
     font-family="var(--font-display)"
     font-size="48"
     font-weight="600"
@@ -32,6 +32,17 @@ const { class: className = '' } = Astro.props;
     filter="url(#glow)"
     letter-spacing="2"
   >LUCIDS</text>
+
+  <text
+    x="140"
+    y="75"
+    font-family="var(--font-body)"
+    font-size="14"
+    font-weight="400"
+    fill="#888888"
+    text-anchor="middle"
+    letter-spacing="0.5"
+  >Dream-tenders of the Hallow</text>
 </svg>
 
 <style>

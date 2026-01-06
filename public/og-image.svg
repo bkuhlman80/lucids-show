@@ -24,37 +24,37 @@
 
   <!-- Main content - vertically centered with safe margins -->
   <g>
-    <!-- LUCIDS wordmark - reduced size for safe margins -->
+    <!-- LUCIDS wordmark - tighter letter-spacing -->
     <text
       x="600"
-      y="280"
+      y="270"
       font-family="system-ui, -apple-system, sans-serif"
       font-size="110"
       font-weight="700"
       fill="#7FDBCA"
       text-anchor="middle"
       filter="url(#textGlow)"
-      letter-spacing="6"
+      letter-spacing="1"
     >LUCIDS</text>
 
-    <!-- Tagline -->
+    <!-- Tagline - increased size for readability -->
     <text
       x="600"
-      y="360"
+      y="350"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="32"
+      font-size="42"
       font-weight="400"
       fill="#A8E6CF"
       text-anchor="middle"
-      letter-spacing="1"
+      letter-spacing="0"
     >Dream-tenders of the Hallow</text>
 
-    <!-- Subtitle -->
+    <!-- Subtitle - increased size for readability -->
     <text
       x="600"
-      y="420"
+      y="410"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="26"
+      font-size="34"
       font-weight="400"
       fill="#888888"
       text-anchor="middle"
