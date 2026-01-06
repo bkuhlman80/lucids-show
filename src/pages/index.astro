@@ -62,23 +62,25 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 						LUCIDS is a family-friendly audio drama about magical creatures who tend children's dreams—exploring the full range of emotions with care, honesty, and original music in every episode.
 					</p>
 					<div class="hero-cta">
-						<form name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
-							<input type="hidden" name="form-name" value="email-signup" />
-							<p class="hidden">
-								<label>Don't fill this out if you're human: <input name="bot-field" /></label>
-							</p>
-							<div class="form-group">
-								<input
-									type="email"
-									name="email"
-									placeholder="your@email.com"
-									required
-									class="email-input"
-									aria-label="Email address"
-								/>
-								<button type="submit" class="btn btn-primary">Get Notified When We Launch</button>
-							</div>
-						</form>
+						<div class="signup-card">
+							<form name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
+								<input type="hidden" name="form-name" value="email-signup" />
+								<p class="hidden">
+									<label>Don't fill this out if you're human: <input name="bot-field" /></label>
+								</p>
+								<div class="form-group">
+									<input
+										type="email"
+										name="email"
+										placeholder="your@email.com"
+										required
+										class="email-input"
+										aria-label="Email address"
+									/>
+									<button type="submit" class="btn btn-cta">Notify Me</button>
+								</div>
+							</form>
+						</div>
 						<a href="#about" class="btn btn-secondary">Learn More</a>
 					</div>
 				</div>
@@ -120,13 +122,15 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 				<h2 class="text-amber">Send Us a Dream</h2>
 				<div class="contact-content">
 					<p class="text-lg">
-						Have a question? Want to share what your family thinks? We'd love to hear from you. Leave us a voice message or drop us a line.
+						Text us, call us, or send an email—we'd love to hear from your family.
 					</p>
-					<p class="contact-email">
-						<a href="mailto:friends@lucids.show" class="text-brand">friends@lucids.show</a>
-					</p>
-					<div class="contact-widget card">
-						<p class="text-secondary">[SpeakPipe widget will be integrated here]</p>
+					<div class="contact-methods">
+						<p class="contact-method">
+							📱 <a href="tel:+18012038149" class="text-brand">(801) 203-8149</a>
+						</p>
+						<p class="contact-method">
+							✉️ <a href="mailto:friends@lucids.show" class="text-brand">friends@lucids.show</a>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -282,10 +286,30 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		border-top: 1px solid var(--color-border);
 	}
 
-	/* Email Signup Form */
+	/* Email Signup Card */
+	@keyframes glow-pulse {
+		0%, 100% {
+			box-shadow: 0 0 20px rgba(127, 219, 202, 0.3),
+			            0 0 40px rgba(127, 219, 202, 0.1);
+		}
+		50% {
+			box-shadow: 0 0 30px rgba(127, 219, 202, 0.4),
+			            0 0 60px rgba(127, 219, 202, 0.15);
+		}
+	}
+
+	.signup-card {
+		background-color: var(--color-cavern-mid);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		padding: var(--space-8);
+		margin-bottom: var(--space-6);
+		animation: glow-pulse 4s ease-in-out infinite;
+	}
+
 	.signup-form {
 		width: 100%;
-		max-width: 600px;
+		max-width: 500px;
 		margin: 0 auto;
 	}
 
@@ -298,12 +322,12 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 
 	.email-input {
 		flex: 1;
-		min-width: 250px;
+		min-width: 200px;
 		padding: var(--space-3) var(--space-4);
 		font-family: var(--font-body);
 		font-size: var(--text-base);
 		color: var(--color-text-primary);
-		background-color: var(--color-cavern-mid);
+		background-color: var(--color-bg-page);
 		border: 2px solid var(--color-border);
 		border-radius: var(--radius-md);
 		transition: border-color 0.2s ease;
@@ -318,15 +342,39 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		color: var(--color-text-secondary);
 	}
 
+	.btn-cta {
+		background-color: var(--color-cta);
+		color: var(--color-cavern-deep);
+		font-family: var(--font-display);
+		font-weight: var(--weight-medium);
+		padding: var(--space-3) var(--space-6);
+		border-radius: var(--radius-md);
+		border: none;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.btn-cta:hover {
+		background-color: var(--color-amber-light);
+		transform: translateY(-1px);
+	}
+
 	.hidden {
 		display: none;
 	}
 
-	/* Contact Email */
-	.contact-email {
-		margin-top: var(--space-4);
-		margin-bottom: var(--space-6);
+	/* Contact Methods */
+	.contact-methods {
+		margin-top: var(--space-8);
+	}
+
+	.contact-method {
 		font-size: var(--text-xl);
+		margin-bottom: var(--space-4);
+	}
+
+	.contact-method:last-child {
+		margin-bottom: 0;
 	}
 
 	/* Responsive adjustments */
@@ -348,6 +396,10 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 			grid-template-columns: 1fr;
 		}
 
+		.signup-card {
+			padding: var(--space-6);
+		}
+
 		.form-group {
 			flex-direction: column;
 			align-items: stretch;
@@ -355,6 +407,14 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 
 		.email-input {
 			min-width: 100%;
+		}
+
+		.btn-cta {
+			width: 100%;
+		}
+
+		.contact-method {
+			font-size: var(--text-lg);
 		}
 	}
 </style>
