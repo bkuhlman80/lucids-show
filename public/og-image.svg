@@ -2,62 +2,59 @@
   <!-- Background -->
   <rect width="1200" height="630" fill="#0D1518"/>
 
-  <!-- Decorative glow shapes in background -->
+  <!-- Definitions -->
   <defs>
-    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" style="stop-color:#7FDBCA;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#7FDBCA;stop-opacity:0" />
-    </radialGradient>
-    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" style="stop-color:#E8A857;stop-opacity:0.2" />
-      <stop offset="100%" style="stop-color:#E8A857;stop-opacity:0" />
-    </radialGradient>
     <filter id="textGlow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Subtle background glow behind text -->
+    <radialGradient id="centralGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" style="stop-color:#7FDBCA;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#7FDBCA;stop-opacity:0" />
+    </radialGradient>
   </defs>
 
-  <!-- Background glows -->
-  <ellipse cx="200" cy="150" rx="300" ry="300" fill="url(#glow1)" />
-  <ellipse cx="1000" cy="500" rx="350" ry="350" fill="url(#glow2)" />
+  <!-- Central subtle glow behind text -->
+  <ellipse cx="600" cy="315" rx="500" ry="300" fill="url(#centralGlow)" />
 
-  <!-- Main content -->
+  <!-- Main content - vertically centered with safe margins -->
   <g>
-    <!-- LUCIDS wordmark -->
+    <!-- LUCIDS wordmark - reduced size for safe margins -->
     <text
       x="600"
-      y="300"
+      y="280"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="140"
-      font-weight="600"
+      font-size="110"
+      font-weight="700"
       fill="#7FDBCA"
       text-anchor="middle"
       filter="url(#textGlow)"
-      letter-spacing="8"
+      letter-spacing="6"
     >LUCIDS</text>
 
     <!-- Tagline -->
     <text
       x="600"
-      y="380"
+      y="360"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="36"
+      font-size="32"
       font-weight="400"
       fill="#A8E6CF"
       text-anchor="middle"
-      letter-spacing="2"
+      letter-spacing="1"
     >Dream-tenders of the Hallow</text>
 
     <!-- Subtitle -->
     <text
       x="600"
-      y="450"
+      y="420"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="28"
+      font-size="26"
       font-weight="400"
       fill="#888888"
       text-anchor="middle"
