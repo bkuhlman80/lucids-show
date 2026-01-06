@@ -56,18 +56,30 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 			<div class="container">
 				<div class="hero-content">
 					<h1 class="hero-title">
-						<span class="text-glow">[Placeholder: Main headline]</span>
+						<span class="text-glow">Where Dreams Come Alive</span>
 					</h1>
 					<p class="hero-subtitle text-lg">
-						[Placeholder: Compelling one-sentence description of what LUCIDS is — target audience, genre, what makes it special]
+						LUCIDS is a family-friendly audio drama about magical creatures who tend children's dreams—exploring the full range of emotions with care, honesty, and original music in every episode.
 					</p>
 					<div class="hero-cta">
-						<button class="btn btn-primary">
-							[Placeholder: Primary CTA - e.g., "Get Notified" or "Listen Now"]
-						</button>
-						<button class="btn btn-secondary">
-							[Placeholder: Secondary CTA - e.g., "Learn More"]
-						</button>
+						<form name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
+							<input type="hidden" name="form-name" value="email-signup" />
+							<p class="hidden">
+								<label>Don't fill this out if you're human: <input name="bot-field" /></label>
+							</p>
+							<div class="form-group">
+								<input
+									type="email"
+									name="email"
+									placeholder="your@email.com"
+									required
+									class="email-input"
+									aria-label="Email address"
+								/>
+								<button type="submit" class="btn btn-primary">Get Notified When We Launch</button>
+							</div>
+						</form>
+						<a href="#about" class="btn btn-secondary">Learn More</a>
 					</div>
 				</div>
 			</div>
@@ -79,23 +91,23 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 				<h2 class="text-amber">About LUCIDS</h2>
 				<div class="about-content">
 					<p class="text-lg">
-						[Placeholder: Parent-focused pitch — What is this show? Why is it valuable for kids ages 8-12? Educational benefits, themes, tone, episodic structure, etc.]
+						Deep beneath the waking world lies the Hallow—a bioluminescent realm where creatures called Lucids tend the dreams of sleeping children. Each episode follows these dream-tenders as they craft nighttime adventures, navigate unexpected challenges, and discover that the dreams they're making often reflect something they need to learn themselves.
 					</p>
 					<p>
-						[Placeholder: Additional context about the Hallow, the premise, what makes this different from other kids' podcasts]
+						LUCIDS is designed for listeners ages 8-12, but crafted to reward the whole family. Littles will love the music and the characters. Bigger kids will catch the emotional depth. Parents will appreciate a show that treats children's inner lives with respect.
 					</p>
 					<div class="about-features">
 						<div class="feature-card card">
-							<h3>[Feature 1 Headline]</h3>
-							<p class="text-secondary">[Placeholder: Description of first key benefit or feature]</p>
+							<h3>Original Music Every Episode</h3>
+							<p class="text-secondary">Each episode features original songs that move the story forward—not filler, but genuine musical storytelling across genres from Latin urbano to K-pop to indie folk.</p>
 						</div>
 						<div class="feature-card card">
-							<h3>[Feature 2 Headline]</h3>
-							<p class="text-secondary">[Placeholder: Description of second key benefit or feature]</p>
+							<h3>Emotional Honesty</h3>
+							<p class="text-secondary">We don't shy away from big feelings. Anxiety, grief, joy, resilience—LUCIDS explores the full emotional landscape of childhood with care and without condescension.</p>
 						</div>
 						<div class="feature-card card">
-							<h3>[Feature 3 Headline]</h3>
-							<p class="text-secondary">[Placeholder: Description of third key benefit or feature]</p>
+							<h3>Audio-First Adventure</h3>
+							<p class="text-secondary">Built for listening. Whether it's bedtime, a road trip, or screen-free time, LUCIDS creates vivid worlds through sound design, voice performance, and music.</p>
 						</div>
 					</div>
 				</div>
@@ -105,14 +117,16 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		<!-- Contact Section -->
 		<section id="contact" class="section-contact">
 			<div class="container">
-				<h2 class="text-amber">Get in Touch</h2>
+				<h2 class="text-amber">Send Us a Dream</h2>
 				<div class="contact-content">
 					<p class="text-lg">
-						[Placeholder: Context for the contact section — "Have questions? Want to share feedback? We'd love to hear from you."]
+						Have a question? Want to share what your family thinks? We'd love to hear from you. Leave us a voice message or drop us a line.
+					</p>
+					<p class="contact-email">
+						<a href="mailto:friends@lucids.show" class="text-brand">friends@lucids.show</a>
 					</p>
 					<div class="contact-widget card">
-						<p class="text-secondary">[Placeholder: SpeakPipe widget will be embedded here]</p>
-						<p class="text-sm text-secondary">[Instructions about voice messages, response time, etc.]</p>
+						<p class="text-secondary">[SpeakPipe widget will be integrated here]</p>
 					</div>
 				</div>
 			</div>
@@ -127,7 +141,10 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 						<p class="text-sm text-secondary">Dream-tenders of the Hallow</p>
 					</div>
 					<div class="footer-links">
-						<p class="text-sm text-secondary">[Placeholder: Social media links]</p>
+						<p class="text-sm">
+							<a href="mailto:friends@lucids.show" class="text-brand">friends@lucids.show</a>
+						</p>
+						<p class="text-sm text-secondary">[Social media links]</p>
 					</div>
 				</div>
 				<div class="footer-legal">
@@ -265,6 +282,53 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		border-top: 1px solid var(--color-border);
 	}
 
+	/* Email Signup Form */
+	.signup-form {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.form-group {
+		display: flex;
+		gap: var(--space-3);
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.email-input {
+		flex: 1;
+		min-width: 250px;
+		padding: var(--space-3) var(--space-4);
+		font-family: var(--font-body);
+		font-size: var(--text-base);
+		color: var(--color-text-primary);
+		background-color: var(--color-cavern-mid);
+		border: 2px solid var(--color-border);
+		border-radius: var(--radius-md);
+		transition: border-color 0.2s ease;
+	}
+
+	.email-input:focus {
+		outline: none;
+		border-color: var(--color-brand);
+	}
+
+	.email-input::placeholder {
+		color: var(--color-text-secondary);
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	/* Contact Email */
+	.contact-email {
+		margin-top: var(--space-4);
+		margin-bottom: var(--space-6);
+		font-size: var(--text-xl);
+	}
+
 	/* Responsive adjustments */
 	@media (max-width: 768px) {
 		.hero-title {
@@ -282,6 +346,15 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 
 		.about-features {
 			grid-template-columns: 1fr;
+		}
+
+		.form-group {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.email-input {
+			min-width: 100%;
 		}
 	}
 </style>
