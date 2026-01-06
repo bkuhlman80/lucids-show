@@ -1,0 +1,43 @@
+---
+// LUCIDS wordmark with bioluminescent glow effect
+const { class: className = '' } = Astro.props;
+---
+
+<svg
+  class={`lucids-logo ${className}`}
+  viewBox="0 0 280 80"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="LUCIDS"
+>
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <text
+    x="140"
+    y="55"
+    font-family="var(--font-display)"
+    font-size="48"
+    font-weight="600"
+    fill="var(--color-glow-primary)"
+    text-anchor="middle"
+    filter="url(#glow)"
+    letter-spacing="2"
+  >LUCIDS</text>
+</svg>
+
+<style>
+  .lucids-logo {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+  }
+</style>
