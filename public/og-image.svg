@@ -22,14 +22,14 @@
   <!-- Central subtle glow behind text -->
   <ellipse cx="600" cy="315" rx="500" ry="300" fill="url(#centralGlow)" />
 
-  <!-- Main content - vertically centered, fine-tuned sizing -->
+  <!-- Main content - vertically centered, balanced sizing -->
   <g>
     <!-- LUCIDS wordmark -->
     <text
       x="600"
-      y="240"
+      y="260"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="200"
+      font-size="150"
       font-weight="700"
       fill="#7FDBCA"
       text-anchor="middle"
@@ -42,7 +42,7 @@
       x="600"
       y="360"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="80"
+      font-size="75"
       font-weight="400"
       fill="#A8E6CF"
       text-anchor="middle"
@@ -52,9 +52,9 @@
     <!-- Subtitle -->
     <text
       x="600"
-      y="445"
+      y="435"
       font-family="system-ui, -apple-system, sans-serif"
-      font-size="60"
+      font-size="50"
       font-weight="400"
       fill="#888888"
       text-anchor="middle"
