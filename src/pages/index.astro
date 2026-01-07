@@ -1,16 +1,23 @@
 ---
 import '../styles/global.css';
-import Logo from '../components/Logo.astro';
 
 const siteUrl = 'https://lucids.show';
 const pageTitle = 'LUCIDS - Dream-tenders of the Hallow';
-const pageDescription = 'An audio drama podcast for children ages 8-12, set in the bioluminescent underground world of the Hallow.';
+const pageDescription = 'A bedtime podcast about magical creatures who tend children\'s dreams—with original music, emotional honesty, and stories that treat your kid\'s inner life with respect.';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+		<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 
@@ -44,7 +51,8 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 			<div class="container">
 				<nav class="nav">
 					<a href="/" class="logo-link">
-						<Logo />
+						<img src="/icon-colored.png" alt="LUCIDS" class="nav-logo-icon" />
+						<span class="nav-logo-text">LUCIDS</span>
 					</a>
 					<a href="#about" class="nav-link">About</a>
 				</nav>
@@ -55,12 +63,13 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		<section class="hero">
 			<div class="container">
 				<div class="hero-content">
-					<h1 class="hero-title">
-						<span class="text-glow">Where Dreams Come Alive</span>
-					</h1>
-					<p class="hero-subtitle text-lg">
-						LUCIDS is a family-friendly audio drama about magical creatures who tend children's dreams—exploring the full range of emotions with care, honesty, and original music in every episode.
+					<div class="hero-brand-text">LUCIDS</div>
+					<h1 class="hero-title">You're among friends</h1>
+					<img src="/keeper-transparent.png" alt="" class="hero-icon" />
+					<p class="hero-subtitle">
+						A bedtime podcast about magical creatures who tend children's dreams—with original music, emotional honesty, and stories that treat your kid's inner life with respect.
 					</p>
+					<div class="launch-badge">Coming Spring 2026</div>
 					<div class="hero-cta">
 						<div class="signup-card">
 							<form name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
@@ -86,49 +95,73 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 			</div>
 		</section>
 
+		<!-- Trailer Section -->
+		<!-- TRAILER: Replace this placeholder with YouTube or audio embed when ready -->
+		<section class="section-trailer">
+			<div class="container">
+				<h2 class="text-amber">Listen to a Preview</h2>
+				<div class="trailer-placeholder">
+					<span class="trailer-placeholder-text">Trailer coming soon</span>
+				</div>
+			</div>
+		</section>
+
 		<!-- About Section -->
 		<section id="about" class="section-about">
 			<div class="container">
 				<h2 class="text-amber">About LUCIDS</h2>
 				<div class="about-content">
 					<p class="text-lg">
-						Deep beneath the waking world lies the Hallow—a bioluminescent realm where creatures called Lucids tend the dreams of sleeping children. Each episode follows these dream-tenders as they craft nighttime adventures, navigate unexpected challenges, and discover that the dreams they're making often reflect something they need to learn themselves.
+						Deep beneath the waking world lies the Hallow—a bioluminescent realm where creatures called Lucids tend the dreams of sleeping children.
+					</p>
+					<p class="text-lg">
+						Each episode follows these dream-tenders as they craft nighttime adventures, navigate unexpected challenges, and discover that the dreams they're making often reflect something they need to learn themselves.
 					</p>
 					<p>
-						LUCIDS is designed for listeners ages 8-12, but crafted to reward the whole family. Littles will love the music and the characters. Bigger kids will catch the emotional depth. Parents will appreciate a show that treats children's inner lives with respect.
+						LUCIDS is designed for listeners ages 8–12, but crafted to reward the whole family. Littles will love the music and the characters. Bigger kids will catch the emotional depth. Parents will appreciate a show that treats children's inner lives with respect.
 					</p>
-					<div class="about-features">
-						<div class="feature-card card">
-							<h3>Original Music Every Episode</h3>
-							<p class="text-secondary">Each episode features original songs that move the story forward—not filler, but genuine musical storytelling across genres from Latin urbano to K-pop to indie folk.</p>
-						</div>
-						<div class="feature-card card">
-							<h3>Emotional Honesty</h3>
-							<p class="text-secondary">We don't shy away from big feelings. Anxiety, grief, joy, resilience—LUCIDS explores the full emotional landscape of childhood with care and without condescension.</p>
-						</div>
-						<div class="feature-card card">
-							<h3>Audio-First Adventure</h3>
-							<p class="text-secondary">Built for listening. Whether it's bedtime, a road trip, or screen-free time, LUCIDS creates vivid worlds through sound design, voice performance, and music.</p>
-						</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Value Props Section -->
+		<section class="section-features">
+			<div class="container">
+				<div class="features-grid">
+					<div class="feature-card card">
+						<h3>Original Music</h3>
+						<p class="text-secondary">Each episode features original songs that move the story forward—not filler, but genuine musical storytelling across genres from Latin urbano to K-pop to Americana folk.</p>
+					</div>
+					<div class="feature-card card">
+						<h3>Emotional Honesty</h3>
+						<p class="text-secondary">We don't shy away from big feelings. Anxiety, grief, joy, resilience—LUCIDS explores the full emotional landscape of childhood with care and without condescension.</p>
+					</div>
+					<div class="feature-card card">
+						<h3>Audio-First</h3>
+						<p class="text-secondary">Built for listening. Whether it's bedtime, a road trip, or screen-free time, LUCIDS creates vivid worlds through sound design, voice performance, and music.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Contact Section -->
-		<section id="contact" class="section-contact">
+		<!-- Dream Line Section -->
+		<section id="dreamline" class="section-dreamline">
 			<div class="container">
-				<h2 class="text-amber">Send Us a Dream</h2>
-				<div class="contact-content">
+				<h2 class="text-amber">Share a Dream</h2>
+				<div class="dreamline-content">
 					<p class="text-lg">
-						Text us, call us, or send an email—we'd love to hear from your family.
+						Got a dream you want to share? Something you saw while you were sleeping?
 					</p>
-					<div class="contact-methods">
-						<p class="contact-method">
-							📱 <a href="tel:+18012038149" class="text-brand">(801) 203-8149</a>
-						</p>
-						<p class="contact-method">
-							✉️ <a href="mailto:friends@lucids.show" class="text-brand">friends@lucids.show</a>
+					<p>
+						Call the Dream Line and tell us your name, your age, and what you saw. Your dream might drift into the Hallow—and show up in a future episode.
+					</p>
+					<p class="text-secondary text-sm">
+						Parents: The Dream Line is a voicemail. We'll never call back or share your number.
+					</p>
+					<div class="dreamline-contact">
+						<a href="tel:+18012038149" class="dreamline-phone">(801) 203-8149</a>
+						<p class="dreamline-email">
+							or email <a href="mailto:friends@lucids.show" class="text-brand">friends@lucids.show</a>
 						</p>
 					</div>
 				</div>
@@ -140,19 +173,39 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 			<div class="container">
 				<div class="footer-content">
 					<div class="footer-brand">
-						<Logo class="footer-logo" />
+						<div class="footer-logo-row">
+							<img src="/icon-colored.png" alt="LUCIDS" class="footer-logo-icon" />
+							<span class="footer-logo-text">LUCIDS</span>
+						</div>
 						<p class="text-sm text-secondary">Dream-tenders of the Hallow</p>
 					</div>
 					<div class="footer-links">
 						<p class="text-sm">
 							<a href="mailto:friends@lucids.show" class="text-brand">friends@lucids.show</a>
 						</p>
-						<p class="text-sm text-secondary">[Social media links]</p>
+						<!-- SOCIAL: Update these hrefs when accounts are created -->
+						<div class="social-links">
+							<a href="#" class="social-link" aria-label="YouTube">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+								</svg>
+							</a>
+							<a href="#" class="social-link" aria-label="Instagram">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+								</svg>
+							</a>
+							<a href="#" class="social-link" aria-label="Spotify">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 				<div class="footer-legal">
 					<p class="text-xs text-secondary">
-						© {new Date().getFullYear()} LUCIDS. All rights reserved.
+						&copy; 2026 LUCIDS. All rights reserved.
 					</p>
 				</div>
 			</div>
@@ -174,8 +227,22 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 	}
 
 	.logo-link {
-		display: block;
-		width: 180px;
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
+		text-decoration: none;
+	}
+
+	.nav-logo-icon {
+		width: 40px;
+		height: auto;
+	}
+
+	.nav-logo-text {
+		font-family: var(--font-display);
+		font-size: var(--text-xl);
+		font-weight: var(--weight-semibold);
+		color: var(--color-glow-primary);
 	}
 
 	.nav-link {
@@ -191,7 +258,7 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 
 	/* Hero */
 	.hero {
-		padding: var(--space-20) 0;
+		padding: var(--space-16) 0 var(--space-20);
 		text-align: center;
 	}
 
@@ -200,15 +267,49 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		margin: 0 auto;
 	}
 
+	.hero-icon {
+		max-width: 180px;
+		width: 100%;
+		height: auto;
+		margin-top: var(--space-4);
+		margin-bottom: var(--space-6);
+	}
+
+	.hero-brand-text {
+		font-family: var(--font-display);
+		font-size: 7.8rem;
+		font-weight: var(--weight-semibold);
+		color: var(--color-glow-primary);
+		margin-bottom: var(--space-2);
+		letter-spacing: 3px;
+	}
+
 	.hero-title {
-		font-size: var(--text-5xl);
+		font-size: 1.8rem;
 		margin-bottom: var(--space-6);
 		line-height: var(--leading-tight);
+		color: var(--color-text-emphasis);
+		font-weight: var(--weight-medium);
 	}
 
 	.hero-subtitle {
-		margin-bottom: var(--space-8);
+		margin-bottom: var(--space-6);
 		color: var(--color-text-secondary);
+		font-size: var(--text-lg);
+		line-height: var(--leading-relaxed);
+	}
+
+	.launch-badge {
+		display: inline-block;
+		background-color: var(--color-cavern-mid);
+		border: 1px solid var(--color-glow-primary);
+		color: var(--color-glow-primary);
+		font-family: var(--font-display);
+		font-size: var(--text-sm);
+		font-weight: var(--weight-medium);
+		padding: var(--space-2) var(--space-4);
+		border-radius: var(--radius-full);
+		margin-bottom: var(--space-8);
 	}
 
 	.hero-cta {
@@ -218,46 +319,113 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		flex-wrap: wrap;
 	}
 
+	/* Trailer Section */
+	.section-trailer {
+		padding: var(--space-16) 0;
+		background-color: var(--color-cavern-mid);
+	}
+
+	.section-trailer h2 {
+		text-align: center;
+		margin-bottom: var(--space-8);
+	}
+
+	.trailer-placeholder {
+		max-width: 800px;
+		margin: 0 auto;
+		aspect-ratio: 16 / 9;
+		background-color: var(--color-cavern-deep);
+		border: 2px dashed var(--color-border);
+		border-radius: var(--radius-lg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.trailer-placeholder-text {
+		font-family: var(--font-display);
+		font-size: var(--text-xl);
+		color: var(--color-text-secondary);
+	}
+
 	/* About Section */
 	.section-about {
 		padding: var(--space-20) 0;
 	}
 
 	.about-content {
-		max-width: 100%;
-	}
-
-	.about-content > p {
 		max-width: 75ch;
 	}
 
-	.about-features {
+	.about-content > p {
+		margin-bottom: var(--space-4);
+	}
+
+	.about-content > p:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Features Section */
+	.section-features {
+		padding: var(--space-12) 0 var(--space-20);
+	}
+
+	.features-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		gap: var(--space-6);
-		margin-top: var(--space-12);
 	}
 
 	.feature-card h3 {
 		font-size: var(--text-xl);
 		margin-bottom: var(--space-3);
+		color: var(--color-glow-primary);
 	}
 
-	/* Contact Section */
-	.section-contact {
+	.feature-card p {
+		margin-bottom: 0;
+	}
+
+	/* Dream Line Section */
+	.section-dreamline {
 		padding: var(--space-20) 0;
 		background-color: var(--color-cavern-mid);
 	}
 
-	.contact-content {
+	.section-dreamline h2 {
+		text-align: center;
+	}
+
+	.dreamline-content {
 		max-width: 700px;
 		margin: 0 auto;
 		text-align: center;
 	}
 
-	.contact-widget {
+	.dreamline-content > p {
+		margin-bottom: var(--space-4);
+	}
+
+	.dreamline-contact {
 		margin-top: var(--space-8);
-		padding: var(--space-12);
+	}
+
+	.dreamline-phone {
+		display: inline-block;
+		font-family: var(--font-display);
+		font-size: var(--text-3xl);
+		font-weight: var(--weight-semibold);
+		color: var(--color-cta);
+		margin-bottom: var(--space-2);
+	}
+
+	.dreamline-phone:hover {
+		color: var(--color-amber-light);
+	}
+
+	.dreamline-email {
+		font-size: var(--text-base);
+		color: var(--color-text-secondary);
 	}
 
 	/* Footer */
@@ -279,8 +447,43 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		max-width: 200px;
 	}
 
-	.footer-logo {
+	.footer-logo-row {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
 		margin-bottom: var(--space-2);
+	}
+
+	.footer-logo-icon {
+		width: 32px;
+		height: auto;
+	}
+
+	.footer-logo-text {
+		font-family: var(--font-display);
+		font-size: var(--text-lg);
+		font-weight: var(--weight-semibold);
+		color: var(--color-glow-primary);
+	}
+
+	.footer-links {
+		text-align: right;
+	}
+
+	.social-links {
+		display: flex;
+		gap: var(--space-4);
+		margin-top: var(--space-4);
+		justify-content: flex-end;
+	}
+
+	.social-link {
+		color: var(--color-text-secondary);
+		transition: color 0.2s ease;
+	}
+
+	.social-link:hover {
+		color: var(--color-brand);
 	}
 
 	.footer-legal {
@@ -366,24 +569,18 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		display: none;
 	}
 
-	/* Contact Methods */
-	.contact-methods {
-		margin-top: var(--space-8);
-	}
-
-	.contact-method {
-		font-size: var(--text-xl);
-		margin-bottom: var(--space-4);
-	}
-
-	.contact-method:last-child {
-		margin-bottom: 0;
-	}
-
 	/* Responsive adjustments */
 	@media (max-width: 768px) {
 		.hero-title {
-			font-size: var(--text-4xl);
+			font-size: 1.5rem;
+		}
+
+		.hero-icon {
+			max-width: 140px;
+		}
+
+		.hero-brand-text {
+			font-size: 4.8rem;
 		}
 
 		.hero {
@@ -391,11 +588,16 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 		}
 
 		.section-about,
-		.section-contact {
+		.section-dreamline,
+		.section-trailer {
 			padding: var(--space-12) 0;
 		}
 
-		.about-features {
+		.section-features {
+			padding: var(--space-8) 0 var(--space-12);
+		}
+
+		.features-grid {
 			grid-template-columns: 1fr;
 		}
 
@@ -416,8 +618,26 @@ const pageDescription = 'An audio drama podcast for children ages 8-12, set in t
 			width: 100%;
 		}
 
-		.contact-method {
-			font-size: var(--text-lg);
+		.dreamline-phone {
+			font-size: var(--text-2xl);
+		}
+
+		.footer-content {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.footer-brand {
+			max-width: none;
+		}
+
+		.footer-links {
+			text-align: center;
+		}
+
+		.social-links {
+			justify-content: center;
 		}
 	}
 </style>
