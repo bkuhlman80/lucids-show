@@ -96,12 +96,14 @@ const pageDescription = 'A bedtime podcast about magical creatures who tend chil
 		</section>
 
 		<!-- Trailer Section -->
-		<!-- TRAILER: Replace this placeholder with YouTube or audio embed when ready -->
 		<section class="section-trailer">
 			<div class="container">
-				<h2 class="text-amber">Listen to a Preview</h2>
-				<div class="trailer-placeholder">
-					<span class="trailer-placeholder-text">Trailer coming soon</span>
+				<h2 class="text-amber">Watch the Trailer</h2>
+				<div class="trailer-container">
+					<video controls playsinline preload="metadata" class="trailer-video">
+						<source src="/trailer.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
 				</div>
 			</div>
 		</section>
@@ -330,22 +332,18 @@ const pageDescription = 'A bedtime podcast about magical creatures who tend chil
 		margin-bottom: var(--space-8);
 	}
 
-	.trailer-placeholder {
+	.trailer-container {
 		max-width: 800px;
 		margin: 0 auto;
-		aspect-ratio: 16 / 9;
-		background-color: var(--color-cavern-deep);
-		border: 2px dashed var(--color-border);
 		border-radius: var(--radius-lg);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		overflow: hidden;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 	}
 
-	.trailer-placeholder-text {
-		font-family: var(--font-display);
-		font-size: var(--text-xl);
-		color: var(--color-text-secondary);
+	.trailer-video {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	/* About Section */
